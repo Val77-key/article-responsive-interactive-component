@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">  
+  <title>Frontend Mentor | Article preview component</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="card">
+        <header class="card__image-container">
+            <img src="images/drawers.jpg" width="660" height="528" alt="drawers with vase" class="card__image">
+        </header>
+        <article class="card__content">
+            <div class="content__container">
+                <h1 class="content__heading">Shift the overall look and feel by adding these wonderful 
+                touches to furniture in your home</h1>
+                <p class="content__body">Ever been in a room and felt like something was missing? Perhaps 
+                it felt slightly bare and uninviting. I’ve got some simple tips 
+                to help you make any room feel complete.</p>
+            </div>
+            <footer class="bottombar">
+                <div class="bottombar__orig">
+                    <img src="images/avatar-michelle.jpg" alt="" width="40" height="40" class="bottombar__image">
+                    <div class="bottombar__author">
+                        <h2 class="bottombar__author-name">Michelle Appleton</h2>
+                        <time datetime="2020-06-28" class="bottombar__author-date">28 Jun 2020</time>
+                    </div>
+                    <button type="button" aria-label="Share links" class="button">
+                        <img src="images/icon-share.svg" alt="" width="32" height="32" class="button-image">
+                    </button>
+                </div>
+                <div class="bottombar__share hidden">
+                    <p class="share-text">Share</p>
+                    <a href="https://www.facebook.com/" aria-label="Share on facebook"><img src="images/icon-facebook.svg" alt="" height="20" width="20"></a>
+                    <a href="https://x.com/" aria-label="Shate on X" class="center_link"><img src="images/icon-twitter.svg" alt="" height="20" width="20"></a>
+                    <a href="https://www.pinterest.com/" aria-label="Share on pinterest"><img src="images/icon-pinterest.svg" alt="" height="20" width="20"></a>
+                    <button type="button" aria-label="Share links" class="button">
+                        <img src="images/icon-share-white.svg" alt="" width="32" height="32" class="button-image-dark">
+                    </button>
+                </div>
+                <div class="bottombar__share--desktop hidden">
+                    <p class="share-text">Share</p>
+                    <a href="https://www.facebook.com/" aria-label="Share on facebook"><img src="images/icon-facebook.svg" alt="" height="20" width="20"></a>
+                    <a href="https://x.com/" aria-label="Shate on X" class="center_link" ><img src="images/icon-twitter.svg" alt="" height="20" width="20"></a>
+                    <a href="https://www.pinterest.com/" aria-label="Share on pinterest"><img src="images/icon-pinterest.svg" alt="" height="20" width="20"></a>
+                </div>
+            </footer>
+        </article>
+    </main>
+  <footer class="attribution">
+   <p> Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+    Coded by <a href="#">Valentyn Kisilenko</a>.</p>
+  </footer>
+</body>
+</html>   
