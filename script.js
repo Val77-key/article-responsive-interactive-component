@@ -4,11 +4,14 @@ const bottombarShare = document.querySelector('.bottombar__share');
 const bottombareShareDesk = document.querySelector('.bottombar__share--desktop');
 const lightButton = document.querySelector('.button-image').parentElement;
 const darkButton = document.querySelector('.button-image-dark').parentElement;
+const canHover = window.matchMedia("(hover: hover)");
+const isMobile = window.matchMedia('(max-width:48rem)');
+const isDesktop = window.matchMedia('(min-width:48rem)');
 
 
 for(let i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener('click', () => {
-        if(window.innerWidth <= 768) {
+        if(isMobile.matches) {
         bottombarShare.classList.toggle('hidden');
         } else {
         bottombareShareDesk.classList.toggle('hidden');
@@ -52,7 +55,7 @@ document.addEventListener('click', (event) => {
             bottombarShare.classList.add('hidden');
             bottombareShareDesk.classList.add('hidden');
 
-            if (window.innerWidth > 768)  {
+            if (isDesktop.matches)  {
                 lightButton.classList.remove('hidden');
                 darkButton.classList.add('hidden');
             }
@@ -60,14 +63,14 @@ document.addEventListener('click', (event) => {
 });
 
 lightButton.addEventListener('mouseenter', () => {
-    if (window.innerWidth > 768) {
+    if (canHover.matches) {
         lightButton.classList.add('hidden');
         darkButton.classList.remove('hidden');
     }
 });
 
 darkButton.addEventListener('mouseleave', () => {
-    if (window.innerWidth > 768 &&
+    if (canHover.matches &&
         bottombareShareDesk.classList.contains('hidden')) {
 
         darkButton.classList.add('hidden');
